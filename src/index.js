@@ -85,7 +85,7 @@ app.patch('/todos/:id/done', checksExistsUserAccount,  checksExistsTodo, (reques
 
   user.todos[todoIndex].done = true;
 
-  return response.status(200).send();
+  return response.send();
 });
 
 app.delete('/todos/:id', checksExistsUserAccount, checksExistsTodo, (request, response) => {
